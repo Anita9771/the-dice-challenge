@@ -1,24 +1,21 @@
-let randomNumber1 = Math.round(Math.random() * 5 + 1);
-let randomNumber2 = Math.round(Math.random() * 5 + 1);
-let imageOne = document.querySelector(".img1");
+// Generate random number from 1 to 6, either method is fine
+let randomNumber1 = Math.floor((Math.random() * 6) + 1);
+
+let randomNumber2 = Math.round((Math.random() * 5) + 1);
+
+// Select the image to use, either way is fine
+let imageOne = document.querySelectorAll("img")[0];
+
 let imageTwo = document.querySelector(".img2");
+
+// Selecting text to display winner
 let heading = document.querySelector("h1");
 
-// alert(`${randomNumber1} and ${randomNumber2}`);
+// Dynamically choosing image for player 1 
+let imageOneSrc = `./images/dice${randomNumber1}.png`
 
-if (randomNumber1 === 1) {
-  imageOne.setAttribute("src", "./images/dice1.png");
-} else if (randomNumber1 === 2) {
-  imageOne.setAttribute("src", "./images/dice2.png");
-} else if (randomNumber1 === 3) {
-  imageOne.setAttribute("src", "./images/dice3.png");
-} else if (randomNumber1 === 4) {
-  imageOne.setAttribute("src", "./images/dice4.png");
-} else if (randomNumber1 === 5) {
-  imageOne.setAttribute("src", "./images/dice5.png");
-} else {
-  imageOne.setAttribute("src", "./images/dice6.png");
-}
+// Setting attribute for src for players, either way is fine
+imageOne.setAttribute("src", imageOneSrc)
 
 if (randomNumber2 === 1) {
     imageTwo.setAttribute("src", "./images/dice1.png");
@@ -44,6 +41,7 @@ if (randomNumber2 === 1) {
       }
   }
 
+//   Delay for 1 second before announcing winner
   setTimeout(declareWinner, 1000);
 
  
