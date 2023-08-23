@@ -19,7 +19,7 @@ Player 2's rolled number: Also generated randomly between 1 and 6.
 ### Implementation Details
 The game is implemented using HTML, CSS, and JavaScript. The JavaScript code (`index.js`) handles the core game logic:
 
-Two random numbers between 1 and 6 are generated using `Math.random()` and `Math.round`().
+Two random numbers between 1 and 6 are generated using `Math.random()` and `Math.round()` or `Math.floor()`.
 The corresponding dice images are displayed based on the rolled numbers.
 A winner is declared based on the comparison of the rolled numbers.
 The game announces the winner with a brief delay using `setTimeout()`.
